@@ -63,10 +63,10 @@ $(function () {
 
         //创建缩略图，准备加到shotBar
         var $img = $(createImg(dataUrl));
-        $img.hide();
         $(this).append($img);
 
         var offset = getOffset($img[0]);
+        $img.hide();
         //添加动画效果
         $imgBig.animate({
             left: offset.x + "px",
@@ -186,6 +186,5 @@ $(function () {
             video.src = window.URL.createObjectURL(file)
         }
     }
-
     init();
 });
