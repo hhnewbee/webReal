@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #999; }
+  body #container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body #container .addVideo {
+      height: 250px;
+      width: 50%;
+      margin-top: 10px;
+      background-color: #1c2329;
+      border-radius: 4px; }
+      body #container .addVideo input {
+        display: none; }
+    body #container #shotBar {
+      height: 130px;
+      width: 95%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #727988;
+      border-radius: 5px;
+      overflow: auto;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+      flex-shrink: 0; }
+      body #container #shotBar #imgShot:first-child {
+        margin-left: 0; }
+      body #container #shotBar #imgShot {
+        position: relative;
+        margin-left: 5px;
+        height: 110px;
+        width: 210px;
+        overflow: hidden;
+        /**
+        缂╃暐鍥剧殑鐩稿叧鎿嶄綔鎸夐挳
+         */ }
+        body #container #shotBar #imgShot img {
+          border-radius: 5px;
+          height: 100%;
+          width: 100%; }
+        body #container #shotBar #imgShot ul {
+          position: absolute;
+          list-style-type: none;
+          transform: translateY(-100%);
+          transition: all 200ms;
+          top: 0;
+          right: 0;
+          margin: 0;
+          padding: 0;
+          font-size: 0; }
+          body #container #shotBar #imgShot ul li {
+            display: inline-block;
+            background-color: rgba(114, 121, 136, 0.2);
+            text-align: center;
+            width: 1.25rem;
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+            vertical-align: top; }
+          body #container #shotBar #imgShot ul :nth-child(1) {
+            font-size: 15px;
+            color: #00d6b2; }
+            body #container #shotBar #imgShot ul :nth-child(1):hover {
+              color: #00ffd8; }
+          body #container #shotBar #imgShot ul :nth-child(2) {
+            font-size: 16px;
+            color: #ad3d2d; }
+            body #container #shotBar #imgShot ul :nth-child(2):hover {
+              color: #eb533f; }
+
+/*# sourceMappingURL=vss.css.map */
