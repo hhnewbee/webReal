@@ -1,0 +1,63 @@
+body {
+    width: 760px;
+    margin: 0 auto;
+    background-color: #FDFCD2;
+}
+
+.inventory{
+    font-family: "Trebuchet MS",Arial Helvetica,sans-serif;
+    width:100%;
+    margin-top: 25px;
+    /*坍塌边框，去掉单元格空隙*/
+    border-collapse: collapse;
+}
+
+.inventory caption{
+    color: #797865;
+    text-align: right;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.inventory td, .inventory th{
+    font-size:1.1em;
+    /*设置边框，分离数据*/
+    border: 1px solid #DDB575;
+    padding: 3px 7px;
+    cursor: pointer;
+    /*text-align可以继承*/
+    text-align: left;
+    /*vertical-align不能继承，所有要应用在td，th中*/
+    vertical-align: middle;
+}
+/*突出表头*/
+.inventory th{
+    text-transform:uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*兼容旧的浏览器，比如IE9之前*/
+    background: rgb(229,76,16);
+    background: linear-gradient(to bottom, rgb(229,76,16),rgb(173,54,8));
+    color:white;
+}
+
+/*突出关键列的数据*/
+.inventory tr td:last-of-type{
+    color: rgb(229,76,16);
+}
+
+/*增加奇偶数行的颜色，方便用户对每行数据的识别*/
+.inventory tr:nth-of-type(odd){
+    /*选择透明色，防止覆盖数据*/
+    background-color: rgba(229,76,16,.1);
+}
+.inventory tr:nth-of-type(even){
+    background-color: rgba(225,255,255,.1);
+}
+/*标识选中的数据*/
+.inventory tr:hover{
+    background: rgba(238, 79, 17, 0.4);
+}
+/*用列组的方式设置列宽，但只能使用两组属性width和背景属性（background-）*/
+#price,#rating{
+    width: 15%;
+}
